@@ -1,0 +1,333 @@
+@charset "utf-8"; 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: top;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    color: #333333;
+    background-color: #fff;
+    
+}
+
+.container{
+    height: 700px;
+    position: relative;
+}
+
+header, .image-slide, .content-wrap, footer{
+    width: 1200px;
+    margin: auto;
+}
+
+.header-wrap{
+    height: 100px;
+    background-color: #156bfb;
+}
+
+header{
+    height: 100%;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 30px;
+    left: 0;
+    /* background-color: red; */
+}
+
+nav{
+    position: absolute;
+    top: 59px;
+    right: 0;
+    z-index: 1;
+}
+
+nav>ul{
+    display: flex;
+    /* background-color: burlywood; */
+}
+
+.main-menu a{
+    display: block;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 94);
+}
+
+/* .main-menu>a:hover{
+    이렇게 쓰면 안된다고 하심. 메인메뉴부분 호버했을때만 색이 바뀌고 서브메뉴에 호버했을땐 메인메뉴 부분은 안바뀜.
+} */
+
+.main-menu:hover>a{
+    background-color: rgb(163, 163, 58);
+    color: #fff;
+}
+
+.sub-menu a:hover{
+    background-color: rgb(104, 94, 68);
+    color: #fff;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.sub-menu a{
+    display: block;
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(255, 189, 9);
+}
+
+.image-slide{
+    height: 300px;
+    background-color: #396;
+    overflow: hidden;
+}
+
+.image-slide>ul {
+    width: 3600px;
+    height: 300px;
+    display: flex;
+    
+}
+
+.image-slide li{
+    width: 1200px;
+    height: 100%;
+    position: relative;
+}
+
+.image-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.image-slide h2{
+    font-size: 20px;
+    color: #fff;
+    background-color: #156bfb;
+    padding: 20px 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-wrap{
+    height: 200px;
+    display: flex;
+}
+
+.content-wrap>article{
+    width: 400px;
+}
+
+
+.notice-gallery{
+    /* background-color: #639; */
+    position: relative;
+}
+/* 앱솔루트할 컨텐츠들의 기준이 되는 것 */
+
+.notice-gallery>ul{
+    display: flex;
+}
+
+.notice>h2, 
+.gallery>h2 {
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    
+}
+
+.notice>.tab-content a{
+    display: flex;
+    margin: 7px 0;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #fff;
+    justify-content: space-between;
+}
+
+.tab-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 47px);
+    left: 0;
+    background-color: #156bfb;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.tab-active{
+    background-color: #156bfb;
+    color: #fff;
+}
+
+.tab-content-active{
+    display: block;
+}
+
+.gallery ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.gallery img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+.banner{
+    /* background-color: #936; */
+}
+
+.banner h2, .quick-link h2{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #0248c0;
+    color: #fff;
+}
+
+.banner p, .quick-link ul{
+    background-color: #156bfb;
+    height: 153px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.quick-link{
+    background-color: #963;
+}
+
+.quick-link ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+.quick-link a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.quick-link img{
+    width: 40px;
+}
+
+.footer-wrap{
+    height: 100px;
+    background-color: rgb(214, 171, 171);
+}
+
+footer{
+    height: 100%;
+    /* background-color: #693; */
+    display: flex;
+    align-items: center;
+    
+}
+
+.f-menu{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.f-menu li{
+    padding: 0 20px;
+    border-right: 1px solid #333;
+}
+
+.f-menu li:last-child{
+    border: none;
+}
+
+.copyright{
+    padding-left: 20px;
+}
+
+.popup-container{
+    display: none;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #156bfb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #000;
+}
+
+.popup-container h2{
+    text-align: center;
+}
+
+.popup-container img{
+    margin: 20px 0;
+}
+
+.popup-container .button-wrap{
+    text-align: end;
+    margin-top: 40px;
+}
+
+.popup-container button{
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: #303030;
+    color: #fff;
+}
